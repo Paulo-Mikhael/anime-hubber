@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Ubuntu Font */
+  --font-ubuntu: var(--font-app-ubuntu);
+
+  /* Color Variables */
+  /* Application Primary Colors */
+  --color-primary-100: #236C6B;
+  --color-primary-250: #329A98;
+  --color-primary-500: #46C3C1;
+  --color-primary-750: #74D2D0;
+  --color-primary-1000: #A3E1E0;
+  /* Application Secondary Colors */
+  --color-secondary-100: #1D4A5D;
+  --color-secondary-250: #2C6F8C;
+  --color-secondary-500: #3B94BA;
+  --color-secondary-750: #64AECE;
+  --color-secondary-1000: #92C6DD;
+  /* Feedback Colors */
+  --color-success: #A5D946;
+  --color-info: #5263D8;
+  --color-danger: #B7363C;
+  --color-warning: #FFBB00;
+  /* Typograph Colors */
+  --color-typo-0: #000;
+  --color-typo-16: #292929;
+  --color-typo-30: #4D4D4D;
+  --color-typo-44: #707070;
+  --color-typo-58: #949494;
+  --color-typo-72: #B8B8B8;
+  --color-typo-86: #DBDBDB;
+  --color-typo-100: #fff;
+
+  /* Font Size Variables */
+  --text-emphasis: 57.3px;
+  --text-main-title: 33.2px;
+  --text-main-subtitle: 27.6px;
+  --text-section-title: 23.4px;
+  --text-section-subtitle: 19.2px;
+  --text-paragraph: 16px;
+  --text-description: 13.3px;
+  --text-hint: 9px;
+}
+
+* {
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #061318;
+  background-image: url("/main-background.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+}
