@@ -1,35 +1,50 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
 
+// Props for button component
 interface ButtonProps {
   children: ReactNode,
-  style?: "primary" | "secondary" | "disabled"
-  type?: "normal" | "bordered" | "ghost"
+  style?: "primary" | "secondary"
+  variant?: "normal" | "bordered" | "ghost"
+  disabled?: boolean,
+  onClick?: () => void
 }
-type ButtonTypeProps = ButtonProps & { defaultStyle: string }
+// Props for a type of a button component
+type ButtonVariantProps = ButtonProps & { defaultStyle: string }
 
+// Main button component
 export default function Button({ ...props }: ButtonProps) {
-  const borderedButton = props.type == "bordered";
-  const ghostButton = props.type == "ghost";
+  // Verifies if the component has the bordered variant, and store the boolean value
+  const borderedButton = props.variant == "bordered";
+  // Verifies if the component has the ghost variant, and store the boolean value
+  const ghostButton = props.variant == "ghost";
 
+  // If the component doesn't have a style prop, defines as primary style
   props.style = props.style ? props.style : "primary";
 
+  // Default styles for the button
   const defaultStyle = "px-8 py-2.5 rounded-md before:rounded-md hover:cursor-pointer transition-all transition-discrete";
-  const buttonTypeProps: ButtonTypeProps = {
+  // Makes a `ButtonVariantProps` type object, to pass the defaultStyles for the button variant components
+  const buttonVariantProps: ButtonVariantProps = {
     ...props,
     defaultStyle
   };
 
-  if (borderedButton) return (<BorderedButton {...buttonTypeProps} />);
-  if (ghostButton) return (<GhostButton {...buttonTypeProps} />);
-  return (<NormalButton {...buttonTypeProps} />);
+  // Return the equivalent button variant by the variant prop, normal variant as default
+  if (borderedButton) return (<BorderedButton {...buttonVariantProps} />);
+  if (ghostButton) return (<GhostButton {...buttonVariantProps} />);
+  return (<NormalButton {...buttonVariantProps} />);
 }
 
-function NormalButton({ children, style, defaultStyle }: ButtonTypeProps) {
-  const primary = style == "primary";
-  const secondary = style == "secondary";
-  const disabled = style == "disabled";
+// Normal variant button component
+function NormalButton({ children, style, defaultStyle, disabled = false }: ButtonVariantProps) {
+  // Verifies if the component has the primary style and if it isn't disabled, and store the boolean value
+  const primary = style == "primary" && disabled == false;
+  // Verifies if the component has the secondary style and if it isn't disabled, and store the boolean value
+  const secondary = style == "secondary" && disabled == false;
 
+  // Returns the button, styled by Tailwind classes
+  // Uses the clsx to do a conditional style, and define a default style
   return (
     <button className={
       clsx(
@@ -45,10 +60,10 @@ function NormalButton({ children, style, defaultStyle }: ButtonTypeProps) {
   );
 }
 
-function BorderedButton({ children, style, defaultStyle }: ButtonTypeProps) {
+// Bordered variant button component
+function BorderedButton({ children, style, defaultStyle, disabled = false }: ButtonVariantProps) {
   const primary = style == "primary";
   const secondary = style == "secondary";
-  const disabled = style == "disabled";
 
   return (
     <button className={
@@ -65,10 +80,10 @@ function BorderedButton({ children, style, defaultStyle }: ButtonTypeProps) {
   );
 }
 
-function GhostButton({ children, style, defaultStyle }: ButtonTypeProps) {
+// Ghost button variant component
+function GhostButton({ children, style, defaultStyle, disabled = false }: ButtonVariantProps) {
   const primary = style == "primary";
   const secondary = style == "secondary";
-  const disabled = style == "disabled";
 
   return (
     <button className={
