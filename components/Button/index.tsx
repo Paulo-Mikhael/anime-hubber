@@ -1,19 +1,13 @@
+import { ButtonProps } from "@/interfaces/ButtonProps";
 import clsx from "clsx";
-import { ReactNode } from "react";
 
-// Props for button component
-interface ButtonProps {
-  children: ReactNode,
-  style?: "primary" | "secondary"
-  variant?: "normal" | "bordered" | "ghost"
-  disabled?: boolean,
-  onClick?: () => void
-}
-// Props for a type of a button component
+// Props for a variant of a button component, to pass a default style for the variants
 type ButtonVariantProps = ButtonProps & { defaultStyle: string }
+// Component's variants
+type ButtonVariants = "normal" | "bordered" | "ghost";
 
 // Main button component
-export default function Button({ ...props }: ButtonProps) {
+export default function Button({ full = false, ...props }: ButtonProps & { variant?: ButtonVariants }) {
   // Verifies if the component has the bordered variant, and store the boolean value
   const borderedButton = props.variant == "bordered";
   // Verifies if the component has the ghost variant, and store the boolean value
@@ -23,8 +17,12 @@ export default function Button({ ...props }: ButtonProps) {
   props.style = props.style ? props.style : "primary";
 
   // Default styles for the button
-  const defaultStyle = "px-8 py-2.5 rounded-md before:rounded-md hover:cursor-pointer transition-all transition-discrete";
-  // Makes a `ButtonVariantProps` type object, to pass the defaultStyles for the button variant components
+  let defaultStyle = "px-8 py-2.5 rounded-md before:rounded-md hover:cursor-pointer transition-all transition-discrete";
+
+  // Adds a width full style if the full prop is true
+  if (full == true) defaultStyle += " w-full";
+
+  // Makes a `ButtonVariantProps` type object, to pass the default styles for the button variant components
   const buttonVariantProps: ButtonVariantProps = {
     ...props,
     defaultStyle
@@ -37,7 +35,7 @@ export default function Button({ ...props }: ButtonProps) {
 }
 
 // Normal variant button component
-function NormalButton({ children, style, defaultStyle, disabled = false }: ButtonVariantProps) {
+function NormalButton({ children, style, defaultStyle, disabled = false, onClick }: ButtonVariantProps) {
   // Verifies if the component has the primary style and if it isn't disabled, and store the boolean value
   const primary = style == "primary" && disabled == false;
   // Verifies if the component has the secondary style and if it isn't disabled, and store the boolean value
@@ -46,7 +44,7 @@ function NormalButton({ children, style, defaultStyle, disabled = false }: Butto
   // Returns the button, styled by Tailwind classes
   // Uses the clsx to do a conditional style, and define a default style
   return (
-    <button className={
+    <button onClick={onClick} className={
       clsx(
         defaultStyle,
         !disabled && "hover:shadow-[3px_3px_0px_#000] active:shadow-[0px_0px_0px_#000]",
@@ -61,12 +59,12 @@ function NormalButton({ children, style, defaultStyle, disabled = false }: Butto
 }
 
 // Bordered variant button component
-function BorderedButton({ children, style, defaultStyle, disabled = false }: ButtonVariantProps) {
+function BorderedButton({ children, style, defaultStyle, disabled = false, onClick }: ButtonVariantProps) {
   const primary = style == "primary";
   const secondary = style == "secondary";
 
   return (
-    <button className={
+    <button onClick={onClick} className={
       clsx(
         defaultStyle,
         !disabled && "border-2",
@@ -81,12 +79,12 @@ function BorderedButton({ children, style, defaultStyle, disabled = false }: But
 }
 
 // Ghost button variant component
-function GhostButton({ children, style, defaultStyle, disabled = false }: ButtonVariantProps) {
+function GhostButton({ children, style, defaultStyle, disabled = false, onClick }: ButtonVariantProps) {
   const primary = style == "primary";
   const secondary = style == "secondary";
 
   return (
-    <button className={
+    <button onClick={onClick} className={
       clsx(
         defaultStyle,
         !disabled && "relative before:absolute focus:before:opacity-100 before:-inset-[7px] before:content-[''] before:w-[110%] before:h-[130%] before:border-2",
