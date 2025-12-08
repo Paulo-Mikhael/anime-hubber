@@ -45,6 +45,8 @@
 
 * {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  transition: all;
+  transition-duration: 200ms;
 }
 
 body {
