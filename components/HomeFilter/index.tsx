@@ -1,9 +1,11 @@
+import LinearFilter from "../LinearFilter";
+
 export default function HomeFilter() {
   return (
     <>
-      <span className="w-full h-full bg-linear-to-r from-black to-[#132626]/20 z-1 absolute top-0 left-0" />
-      <span className="w-full h-full bg-linear-to-b from-black/60 to-[#132626]/20 z-1 absolute top-0 left-0" />
-      <span className="w-full h-full bg-[#088090]/40 absolute top-0 left-0 z-0" />
+      <LinearFilter linearDirection="right" />
+      <LinearFilter linearDirection="down" blackOpacity={60} />
+      <span className="size-full bg-[#087050]/40 absolute top-0 left-0 z-0" />
     </>
   )
 }

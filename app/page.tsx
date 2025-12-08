@@ -10,7 +10,9 @@ export default function Home() {
       <div className="flex-1 flex flex-col justify-between mt-16 z-10">
         <span className="flex gap-6 flex-col">
           <h1 className="text-emphasis font-bold w-[462px]">Lorem ipsum dolor sit amet</h1>
-          <p className="text-section-subtitle w-[462px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum metus sed nulla vehicula, vitae sodales ligula vestibulum.</p>
+          <p className="text-section-subtitle w-[462px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum metus sed nulla vehicula, vitae sodales ligula vestibulum.
+          </p>
         </span>
         <span>
           <LeadButton>Lorem ipsum</LeadButton>
