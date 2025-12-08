@@ -10,12 +10,13 @@ interface Props {
   placeholder?: string
   disabled?: boolean,
   state?: "success" | "danger"
-  labelText: string,
+  labelText?: string,
   filterButton?: boolean,
-  filterButtonOnClick?: () => void
+  filterButtonOnClick?: () => void,
+  full?: boolean
 }
 
-export default function TextBox({ placeholder = "Escreva algo aqui...", style, disabled = false, labelText, filterButton = false, filterButtonOnClick, state }: Props) {
+export default function TextBox({ placeholder = "Escreva algo aqui...", style, disabled = false, labelText, filterButton = false, filterButtonOnClick, state, full = true }: Props) {
   // Elements ref to change it's style manually
   const labelRef = useRef<HTMLLabelElement>(null);
   const boxBorderRef = useRef<HTMLSpanElement>(null);
@@ -25,13 +26,15 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
   function activeTextboxStyles() {
     // Styles for primary style
     if (primary) {
-      labelRef.current!.style.color = theme.colors.secondary_500;
+      // Changes the label style only if it has a label element
+      labelText && (labelRef.current!.style.color = theme.colors.secondary_500);
       boxBorderRef.current!.style.borderColor = theme.colors.secondary_500;
       boxBackgroundRef.current!.style.background = `linear-gradient(to right, ${theme.colors.secondary_1000}, ${theme.colors.secondary_750})`;
     }
     // Styles for secondary style
     else if (secondary) {
-      labelRef.current!.style.color = theme.colors.primary_500;
+      // Changes the label style only if it has a label element
+      labelText && (labelRef.current!.style.color = theme.colors.primary_500);
       boxBorderRef.current!.style.borderColor = theme.colors.primary_500;
       boxBackgroundRef.current!.style.background = `linear-gradient(to right, ${theme.colors.primary_1000}, ${theme.colors.primary_750})`;
     }
@@ -41,7 +44,8 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
     // Returns if the component is disabled
     if (disabled == true) return;
 
-    labelRef.current!.style.color = "";
+    // Changes the label style only if it has a label element
+    labelText && (labelRef.current!.style.color = "");
     boxBorderRef.current!.style.borderColor = "";
     boxBackgroundRef.current!.style.background = "";
   }
@@ -82,21 +86,23 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
         )
       }
     >
-      <label
-        ref={labelRef}
-        htmlFor="textbox"
-        className={
-          clsx(
-            primary && "text-primary-1000 group-hover:text-primary-500 focus:text-secondary-500",
-            secondary && "text-secondary-1000 group-hover:text-secondary-500 focus:text-primary-500",
-            disabled && "text-typo-72 cursor-not-allowed",
-            success && "text-success",
-            danger && "text-danger"
-          )
-        }
-      >
-        {labelText}
-      </label>
+      {labelText && (
+        <label
+          ref={labelRef}
+          htmlFor="textbox"
+          className={
+            clsx(
+              primary && "text-primary-1000 group-hover:text-primary-500 focus:text-secondary-500",
+              secondary && "text-secondary-1000 group-hover:text-secondary-500 focus:text-primary-500",
+              disabled && "text-typo-72 cursor-not-allowed",
+              success && "text-success",
+              danger && "text-danger"
+            )
+          }
+        >
+          {labelText}
+        </label>
+      )}
       <span
         ref={boxBorderRef}
         className={
@@ -106,7 +112,8 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
             secondary && "border-secondary-750 group-hover:border-secondary-250",
             disabled && "border-typo-72",
             success && "border-success",
-            danger && "border-danger"
+            danger && "border-danger",
+            full && "w-full"
           )
         }>
         <div

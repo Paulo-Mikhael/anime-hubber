@@ -54,8 +54,8 @@ function NormalButton({ children, style, defaultStyle, disabled = false, onClick
       clsx(
         defaultStyle,
         !disabled && "hover:shadow-[3px_3px_0px_#000] active:shadow-[0px_0px_0px_#000] hover:cursor-pointer",
-        primary && "bg-primary-500 shadow-primary-1000 focus:bg-primary-250 focus:shadow-primary-750 active:bg-primary-100",
-        secondary && "bg-secondary-500 shadow-secondary-1000 focus:bg-secondary-250 focus:shadow-secondary-750 active:bg-secondary-100",
+        primary && "bg-primary-500 shadow-primary-1000 focus:bg-primary-100 focus:shadow-primary-750 active:bg-primary-100",
+        secondary && "bg-secondary-500 shadow-secondary-1000 focus:bg-secondary-100 focus:shadow-secondary-750 active:bg-secondary-100",
         disabled && "bg-typo-86 text-typo-58 hover:cursor-not-allowed"
       )
     }>

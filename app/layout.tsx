@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${ubuntu.variable} antialiased text-paragraph text-typo-100`}
       >
+        <Header />
         {children}
       </body>
     </html>

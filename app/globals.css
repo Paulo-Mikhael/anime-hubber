@@ -53,3 +53,17 @@ body {
   background-size: cover;
   background-repeat: repeat-y;
 }
+
+/* Default design horizantal distance */
+main,
+header,
+section,
+footer {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+/* Distance from header */
+main {
+  padding-top: 160px;
+}
