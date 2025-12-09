@@ -1,4 +1,4 @@
-import LinearFilter from "../LinearFilter";
+import LinearFilter from "@/components/ui/LinearFilter";
 
 export default function HomeFilter() {
   return (

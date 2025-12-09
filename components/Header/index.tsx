@@ -1,5 +1,5 @@
-import Button from "../Button";
-import TextBox from "../TextBox";
+import Button from "../ui/Button";
+import TextBox from "../ui/TextBox";
 
 export default function Header() {
   return (

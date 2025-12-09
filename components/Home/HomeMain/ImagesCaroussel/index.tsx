@@ -4,7 +4,7 @@ import { theme } from "@/data/variables";
 import { MoveLeft, MoveRight } from "lucide-react";
 import Image from "next/image";
 import styled from "styled-components";
-import LinearFilter from "../LinearFilter";
+import LinearFilter from "@/components/ui/LinearFilter";
 
 const StyledSpan = styled.span`
   border-radius: calc(infinity * 1px);
@@ -22,7 +22,7 @@ const StyledSpan = styled.span`
   }
 `;
 
-export default function PopularImages() {
+export default function ImagesCaroussel() {
   return (
     <span>
       <div className="flex gap-5 w-[465px] mt-6 overflow-hidden relative">
