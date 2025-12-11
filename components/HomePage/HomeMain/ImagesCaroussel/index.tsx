@@ -40,9 +40,9 @@ export default function ImagesCaroussel() {
             <MoveRight className="text-primary-750 group-hover:text-primary-100" />
           </StyledSpan>
         </span>
-        <p>
+        <blockquote>
           Lorem ipsum dolor sit amet
-        </p>
+        </blockquote>
       </div>
     </span>
   );

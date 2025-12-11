@@ -20,13 +20,13 @@ export default function HomeMain() {
       </div>
       <div className="flex-1 mt-16 z-10">
         <span className="flex h-full flex-col items-end">
-          <h2 className="w-[465px]">
-            <p className="text-right text-section-subtitle">Populares</p>
-            <p className="text-emphasis font-bold text-right">1. Chainsaw Man</p>
+          <span className="w-[465px]">
+            <h2 className="text-right text-section-subtitle">Populares</h2>
+            <h3 className="text-emphasis font-bold text-right">1. Chainsaw Man</h3>
             <p className="text-right text-section-subtitle mt-6">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum metus sed nulla vehicula, vitae sodales ligula vestibulum. Cras quis elementum leo.
             </p>
-          </h2>
+          </span>
           <span className="flex flex-1 flex-col items-end justify-between">
             <ImagesCaroussel />
             <Button>Lorem ipsum</Button>

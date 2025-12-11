@@ -41,6 +41,9 @@
   --text-paragraph: 16px;
   --text-description: 13.3px;
   --text-hint: 9px;
+
+  /* responsive breakpoints */
+  --breakpoint-2xl: 1600px;
 }
 
 * {

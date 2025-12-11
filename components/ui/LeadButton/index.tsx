@@ -1,10 +1,10 @@
 import { ButtonProps } from "@/interfaces/ButtonProps";
 import clsx from "clsx";
-import { ChevronRight, Lightbulb, LucideIcon } from "lucide-react";
+import { ChevronRight, LucideIcon, Sparkles } from "lucide-react";
 
 type LeadButtonProps = ButtonProps & { Icon?: LucideIcon }
 
-export default function LeadButton({ children, style = "primary", disabled = false, Icon = Lightbulb, onClick, full = false }: LeadButtonProps) {
+export default function LeadButton({ children, style = "primary", disabled = false, Icon = Sparkles, onClick, full = false }: LeadButtonProps) {
 
   // Boolean variables to verify the component style
   const primary = style == "primary" && !disabled;
