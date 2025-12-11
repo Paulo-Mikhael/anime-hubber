@@ -5,7 +5,7 @@ import LeadButton from "../../ui/LeadButton";
 
 export default function HomeMain() {
   return (
-    <main className="w-full h-screen bg-[url(/reze-arc.png)] bg-no-repeat bg-cover relative flex pb-12 gap-52">
+    <main className="bg-[url(/reze-arc.png)] bg-no-repeat bg-cover relative flex pb-12 gap-52">
       <HomeFilter />
       <div className="flex-1 flex flex-col justify-between mt-16 z-10">
         <span className="flex gap-6 flex-col">

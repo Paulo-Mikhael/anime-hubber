@@ -1,11 +1,10 @@
-import HomeMain from "@/components/Home/HomeMain";
-import HomeSectionOne from "@/components/Home/HomeSectionOne";
+import HomePage from "@/components/HomePage";
 
 export default function Home() {
   return (
-    <>
-      <HomeMain />
-      <HomeSectionOne />
-    </>
+    <HomePage>
+      <HomePage.Main />
+      <HomePage.SectionOne />
+    </HomePage>
   );
 }
