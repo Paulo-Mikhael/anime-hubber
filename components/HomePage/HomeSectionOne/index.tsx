@@ -32,7 +32,7 @@ export default function HomeSectionOne() {
         </span>
       </div>
       <div className="flex-1 flex justify-end">
-        <Image src="/section-one-image.png" className="2xl:w-[756px] 2xl:h-490px" width={556} height={390} alt="" />
+        <Image src="/section-one-image.png" className="2xl:w-[756px] 2xl:h-[490px]" width={556} height={390} alt="" />
       </div>
     </section>
   );

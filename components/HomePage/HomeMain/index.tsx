@@ -1,7 +1,7 @@
 import HomeFilter from "./HomeFilter";
 import ImagesCaroussel from "./ImagesCaroussel";
-import Button from "../../ui/Button";
-import LeadButton from "../../ui/LeadButton";
+import Button from "@/components/ui/Button";
+import LeadButton from "@/components/ui/LeadButton";
 
 export default function HomeMain() {
   return (

@@ -18,7 +18,7 @@ export default function Button({ full = false, ...props }: ButtonProps & { varia
   if (props.disabled == true) props.style = undefined;
 
   // Default styles for the button
-  let defaultStyle = "px-8 py-2.5 rounded-md before:rounded-md";
+  let defaultStyle = "px-8 py-2.5 rounded-md";
 
   // Adds a width full style if the full prop is true
   if (full == true) defaultStyle += " w-full";
@@ -93,7 +93,7 @@ function GhostButton({ children, style, defaultStyle, disabled = false, onClick 
     <button onClick={onClick} className={
       clsx(
         defaultStyle,
-        !disabled && "relative before:absolute focus:before:opacity-100 before:-inset-[7px] before:content-[''] before:w-[110%] before:h-[130%] before:border-2 hover:cursor-pointer",
+        !disabled && "relative before:absolute before:opacity-0 focus:before:opacity-100 before:-inset-[7px] before:content-[''] before:border-2 before:rounded-lg hover:cursor-pointer",
         primary && "text-primary-500 hover:text-primary-250 hover:bg-primary-1000 focus:text-primary-250 focus:bg-primary-1000 before:border-primary-100 active:bg-primary-750 active:text-primary-100",
         secondary && "text-secondary-500 hover:text-secondary-250 hover:bg-secondary-1000 focus:text-secondary-250 focus:bg-secondary-1000 before:border-secondary-100 active:bg-primary-750 active:text-primary-100",
         disabled && "bg-typo-86 text-typo-58 hover:cursor-not-allowed"

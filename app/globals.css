@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "tailwind-scrollbar";
+
 @theme inline {
   /* Ubuntu Font */
   --font-ubuntu: var(--font-app-ubuntu);

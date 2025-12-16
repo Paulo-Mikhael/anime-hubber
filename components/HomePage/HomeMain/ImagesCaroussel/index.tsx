@@ -1,26 +1,6 @@
-"use client";
-
-import { theme } from "@/data/variables";
-import { MoveLeft, MoveRight } from "lucide-react";
 import Image from "next/image";
-import styled from "styled-components";
 import LinearFilter from "@/components/ui/LinearFilter";
-
-const StyledSpan = styled.span`
-  border-radius: calc(infinity * 1px);
-  cursor: pointer;
-  border-width: 1px;
-  border-color: ${theme.colors.primary_750};
-  padding: 8px;
-
-  &:hover {
-    border-color: ${theme.colors.primary_100};
-  }
-
-  i{
-    color: ${theme.colors.primary_750};
-  }
-`;
+import Arrow from "@/components/ui/Arrow";
 
 export default function ImagesCaroussel() {
   return (
@@ -33,12 +13,12 @@ export default function ImagesCaroussel() {
       </div>
       <div className="flex w-[465px] mt-6 justify-between">
         <span className="flex gap-2.5">
-          <StyledSpan className="group">
-            <MoveLeft className="text-primary-750 group-hover:text-primary-100" />
-          </StyledSpan>
-          <StyledSpan className="group">
-            <MoveRight className="text-primary-750 group-hover:text-primary-100" />
-          </StyledSpan>
+          <Arrow>
+            <Arrow.Left />
+          </Arrow>
+          <Arrow>
+            <Arrow.Right />
+          </Arrow>
         </span>
         <blockquote>
           Lorem ipsum dolor sit amet
