@@ -6,6 +6,7 @@ export default function Home() {
       <HomePage.Main />
       <HomePage.SectionOne />
       <HomePage.SectionTwo />
+      <HomePage.SectionThree />
     </HomePage>
   );
 }
