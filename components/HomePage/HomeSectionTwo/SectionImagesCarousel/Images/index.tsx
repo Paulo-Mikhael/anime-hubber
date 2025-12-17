@@ -47,7 +47,7 @@ function CenterImage() {
             </p>
           </span>
         </span>
-        <span className="absolute bg-black/30 inset-0" />
+        <span className="absolute bg-black/30 inset-0 rounded-[28px] border-[3px] border-primary-1000" />
       </div>
       <Tag>
         <Tag.Element>
