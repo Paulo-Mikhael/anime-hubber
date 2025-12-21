@@ -7,14 +7,14 @@ export default function HomeSectionThree() {
     <section className="flex items-center justify-between">
       <div>
         <span>
-          <h2 className="text-section-title font-bold">Lorem ipsum dolor sit amet</h2>
-          <h3 className="text-section-subtitle">Lorem ipsum dolor sit amet</h3>
+          <h2 className="text-section-title font-bold">Momentos Marcantes</h2>
+          <h3 className="text-section-subtitle">Compartilhados pela Comunidade</h3>
         </span>
         <p className="text-paragraph w-[462px] mt-6 mb-[136px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus turpis, imperdiet et est a, interdum porta nunc. Sed ex sapien, posuere id fermentum non, auctor at mi.
+          Assista aos clipes mais comentados, cenas épicas e momentos emocionantes capturados diretamente dos posts mais populares do blog. A comunidade compartilha o que faz cada anime inesquecível.
         </p>
         <LeadButton>
-          Lorem ipsum
+          Participar da Comunidade
         </LeadButton>
       </div>
       <div>

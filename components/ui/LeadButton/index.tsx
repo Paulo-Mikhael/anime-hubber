@@ -17,7 +17,7 @@ export default function LeadButton({ children, style = "primary", disabled = fal
     <button
       onClick={onClick}
       className={clsx(
-        "flex justify-between gap-8 text-paragraph bg-linear-to-r to-65% p-3.5 rounded-tl-3xl rounded-br-3xl",
+        "flex justify-between gap-8 text-paragraph bg-linear-to-r to-65% p-3.5 rounded-tl-3xl rounded-br-3xl text-shadow-2xs",
         !disabled && "hover:cursor-pointer",
         primary && "from-primary-250 to-primary-500 hover:from-secondary-250 hover:to-primary-250 focus:from-secondary-500 focus:to-secondary-250 active:from-secondary-500 active:to-secondary-500",
         secondary && "from-secondary-250 to-secondary-500 hover:from-primary-250 hover:to-secondary-250 focus:from-primary-500 focus:to-primary-250 active:from-primary-500 active:to-primary-500",

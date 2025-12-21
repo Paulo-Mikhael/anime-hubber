@@ -17,7 +17,7 @@ export default function SectionImagesCarousel() {
           <Arrow.Left />
         </Arrow>
         <Button variant="ghost">
-          Lorem ipsum
+          Veja Mais
         </Button>
         <Arrow>
           <Arrow.Right />

@@ -18,7 +18,7 @@ export default function Button({ full = false, ...props }: ButtonProps & { varia
   if (props.disabled == true) props.style = undefined;
 
   // Default styles for the button
-  let defaultStyle = "px-8 py-2.5 rounded-md";
+  let defaultStyle = "px-8 py-2.5 rounded-md text-shadow-2xs";
 
   // Adds a width full style if the full prop is true
   if (full == true) defaultStyle += " w-full";

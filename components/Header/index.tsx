@@ -6,9 +6,9 @@ export default function Header() {
     <header className="flex justify-between absolute top-0 left-0 z-10 w-full py-12 px-40">
       <TextBox filterButton placeholder="Encontrar posts..." />
       <nav className="flex items-center gap-6">
-        <Button variant="bordered">Lorem ipsum</Button>
-        <Button variant="bordered">Lorem ipsum</Button>
-        <Button variant="bordered">Lorem ipsum</Button>
+        <Button variant="bordered">Newsletter</Button>
+        <Button variant="bordered">Populares</Button>
+        <Button variant="bordered">Explorar Posts</Button>
         <Button>Login</Button>
       </nav>
     </header>

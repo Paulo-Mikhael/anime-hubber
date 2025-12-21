@@ -6,8 +6,8 @@ export default function HomeFooter() {
   return (
     <footer className="bg-primary-1000 py-[60px] flex flex-col items-center">
       <span>
-        <h2 className="text-section-title font-bold text-typo-16">Lorem ipsum dolor sit amet</h2>
-        <h3 className="text-section-subtitle text-center text-typo-16">Lorem ipsum dolor sit amet</h3>
+        <h2 className="text-section-title font-bold text-center text-typo-16">Fique por Dentro de Tudo</h2>
+        <h3 className="text-section-subtitle text-center text-typo-16">Não perca nada do que está acontecendo na comunidade.</h3>
       </span>
       <NewsletterTextBox />
       <span className="flex gap-2.5">
@@ -20,12 +20,11 @@ export default function HomeFooter() {
         <span className="h-[3px] w-full bg-primary-100 mb-6" />
         <span className="flex justify-between">
           <p className="text-typo-16">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Anime Hubber - <b>Tudo do universo dos Animes</b>
           </p>
           <ul className="text-typo-16 flex gap-6">
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
-            <li>Lorem ipsum</li>
+            <li className="cursor-pointer" role="button">Populares</li>
+            <li className="cursor-pointer" role="button">Explorar Posts</li>
           </ul>
         </span>
       </span>

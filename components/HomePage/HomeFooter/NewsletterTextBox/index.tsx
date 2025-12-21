@@ -7,7 +7,7 @@ export function NewsletterTextBox() {
         <input placeholder="Insira seu email" className="outline-none w-full h-full px-3.5 placeholder:text-typo-30 text-typo-16" />
       </div>
       <Button>
-        Lorem ipsum
+        Assinar
       </Button>
     </form>
   );

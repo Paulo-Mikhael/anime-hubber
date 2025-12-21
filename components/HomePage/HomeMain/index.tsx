@@ -9,13 +9,13 @@ export default function HomeMain() {
       <HomeFilter />
       <div className="flex-1 flex flex-col justify-between mt-16 z-10">
         <span className="flex gap-6 flex-col">
-          <h1 className="text-emphasis font-bold w-[462px]">Lorem ipsum dolor sit amet</h1>
+          <h1 className="text-emphasis font-bold w-[462px]">Entre no Universo dos Animes</h1>
           <p className="text-section-subtitle w-[462px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum metus sed nulla vehicula, vitae sodales ligula vestibulum.
+            Descubra resenhas, análises e recomendações das séries que você mais ama. Acompanhe cada detalhe do mundo anime de forma divertida e completa.
           </p>
         </span>
         <span>
-          <LeadButton>Lorem ipsum</LeadButton>
+          <LeadButton>Explorar Agora</LeadButton>
         </span>
       </div>
       <div className="flex-1 mt-16 z-10">
@@ -24,12 +24,12 @@ export default function HomeMain() {
             <h2 className="text-right text-section-subtitle">Populares</h2>
             <h3 className="text-emphasis font-bold text-right">1. Chainsaw Man</h3>
             <p className="text-right text-section-subtitle mt-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum metus sed nulla vehicula, vitae sodales ligula vestibulum. Cras quis elementum leo.
+              Acompanhe a jornada eletrizante de Denji enquanto ele enfrenta demônios e descobre o verdadeiro significado da luta pela sobrevivência.
             </p>
           </span>
           <span className="flex flex-1 flex-col items-end justify-between">
             <ImagesCaroussel />
-            <Button>Lorem ipsum</Button>
+            <Button>Veja mais</Button>
           </span>
         </span>
       </div>
