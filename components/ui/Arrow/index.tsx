@@ -1,9 +1,14 @@
 import { MoveLeft, MoveRight } from "lucide-react";
 import { ReactNode } from "react";
 
-function Arrow({ children }: { children: ReactNode }) {
+interface Props {
+  children: ReactNode,
+  onClick?: () => void
+};
+
+function Arrow({ children, onClick }: Props) {
   return (
-    <span className="rounded-full cursor-pointer border border-primary-750 p-2 hover:border-primary-100 text-primary-750 group">
+    <span onClick={onClick} className="rounded-full cursor-pointer border border-primary-750 p-2 hover:border-primary-100 text-primary-750 group">
       {children}
     </span>
   );

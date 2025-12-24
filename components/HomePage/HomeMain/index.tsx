@@ -1,3 +1,4 @@
+import posts from "@/data";
 import HomeFilter from "./HomeFilter";
 import ImagesCaroussel from "./ImagesCaroussel";
 import Button from "@/components/ui/Button";
@@ -28,7 +29,7 @@ export default function HomeMain() {
             </p>
           </span>
           <span className="flex flex-1 flex-col items-end justify-between">
-            <ImagesCaroussel />
+            <ImagesCaroussel posts={posts} />
             <Button>Veja mais</Button>
           </span>
         </span>
