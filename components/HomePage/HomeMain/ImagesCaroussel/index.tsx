@@ -12,32 +12,43 @@ interface Props {
 }
 
 export default function ImagesCaroussel({ posts }: Props) {
+  // Posts displayed in carousel
   const [showedPosts, setShowedPosts] = useState<IPost[]>([]);
-  const [selectedPostId, setSelectedPostId] = useState<number>(1);
+  // Last showed post's index
   const [lastShowedPostIndex, setLastShowedPostIndex] = useState<number>(2);
+  // First post in carousel's id
+  const [selectedPostId, setSelectedPostId] = useState<number>(1);
 
+  // Executes when the last showed post is changed
   useEffect(() => {
+    // It doesn't let the last showed post's index be lower than two
     if (lastShowedPostIndex < 2) {
       setLastShowedPostIndex(2);
       return
     };
+    // It doesn't let the last showed post's index be greater than `posts` array's lenght
     if (lastShowedPostIndex >= posts.length) {
       setLastShowedPostIndex(posts.length - 1);
       return;
     };
 
+    // Takes the last showed post's index and adds the post with that index and the previous two posts to the `showedPosts` array
     setShowedPosts([
       posts[lastShowedPostIndex - 2],
       posts[lastShowedPostIndex - 1],
       posts[lastShowedPostIndex]
     ]);
 
+    // Sets the first showed post's id as the select post's id
     setSelectedPostId(posts[lastShowedPostIndex - 2].id);
   }, [lastShowedPostIndex]);
 
+  // Executes once
   useEffect(() => {
+    // It only executes if the `showedPost` array is empty
     if (showedPosts.length > 0) return;
 
+    // Sets the first posts to be shown as the three first items in `posts` array
     setShowedPosts([
       posts[0],
       posts[1],
