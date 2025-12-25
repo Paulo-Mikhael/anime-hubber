@@ -1,8 +1,6 @@
-import posts from "@/data";
 import HomeFilter from "./HomeFilter";
-import ImagesCaroussel from "./ImagesCaroussel";
-import Button from "@/components/ui/Button";
 import LeadButton from "@/components/ui/LeadButton";
+import PopularPosts from "./PopularPosts";
 
 export default function HomeMain() {
   return (
@@ -20,19 +18,7 @@ export default function HomeMain() {
         </span>
       </div>
       <div className="flex-1 mt-16 z-10">
-        <span className="flex h-full flex-col items-end">
-          <span className="w-[465px]">
-            <h2 className="text-right text-section-subtitle">Populares</h2>
-            <h3 className="text-emphasis font-bold text-right">1. Chainsaw Man</h3>
-            <p className="text-right text-section-subtitle mt-6">
-              Acompanhe a jornada eletrizante de Denji enquanto ele enfrenta demônios e descobre o verdadeiro significado da luta pela sobrevivência.
-            </p>
-          </span>
-          <span className="flex flex-1 flex-col items-end justify-between">
-            <ImagesCaroussel posts={posts} />
-            <Button>Veja mais</Button>
-          </span>
-        </span>
+        <PopularPosts />
       </div>
     </main>
   );
