@@ -3,7 +3,6 @@
 import Image from "next/image";
 import LinearFilter from "@/components/ui/LinearFilter";
 import Arrow from "@/components/ui/Arrow";
-import IPost from "@/interfaces/IPost";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import clsx from "clsx";
 import IPopularAnime from "@/interfaces/IPopularAnime";
