@@ -1,3 +1,4 @@
+import posts from "@/data/posts";
 import SectionImagesCarousel from "./SectionImagesCarousel";
 
 export default function HomeSectionTwo() {
@@ -11,7 +12,7 @@ export default function HomeSectionTwo() {
           Reviva momentos inesquecíveis de clássicos e lançamentos recentes.
         </h3>
       </span>
-      <SectionImagesCarousel />
+      <SectionImagesCarousel posts={posts} />
     </section>
   );
 }
