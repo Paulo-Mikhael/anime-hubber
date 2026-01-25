@@ -4,7 +4,7 @@ import PopularPosts from "./PopularPosts";
 
 export default function HomeMain() {
   return (
-    <main className="bg-[url(/reze-arc.png)] bg-no-repeat bg-cover relative flex pb-12 gap-52">
+    <main className="bg-[url(/reze-arc.png)] bg-center bg-no-repeat bg-size-[100%] animate-bg-zoom-loop relative flex pb-12 gap-52">
       <HomeFilter />
       <div className="flex-1 flex flex-col justify-between mt-16 z-10">
         <span className="flex gap-6 flex-col">

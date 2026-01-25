@@ -46,6 +46,9 @@
 
   /* responsive breakpoints */
   --breakpoint-2xl: 1600px;
+
+  /* Animations variables */
+  --animate-bg-zoom-loop: zoom 10s linear infinite alternate;
 }
 
 * {
@@ -79,4 +82,15 @@ main,
 section {
   width: 100%;
   height: 100vh;
+}
+
+/* Animations */
+@keyframes zoom {
+  0% {
+    background-size: 100%,
+  }
+
+  100% {
+    background-size: 120%;
+  }
 }
