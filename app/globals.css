@@ -48,7 +48,7 @@
   --breakpoint-2xl: 1600px;
 
   /* Animations variables */
-  --animate-bg-zoom-loop: zoom 10s linear infinite alternate;
+  --animate-bg-zoom-loop: zoom 40s linear infinite;
 }
 
 * {
@@ -76,6 +76,8 @@ footer {
 /* Distance from header */
 main {
   padding-top: 160px;
+  transition: none;
+  transition-duration: 0ms;
 }
 
 main,
@@ -87,10 +89,107 @@ section {
 /* Animations */
 @keyframes zoom {
   0% {
-    background-size: 100%,
+    background-size: 100%;
+    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
+  }
+
+  9% {
+    background-size: 120%;
+    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
+  }
+
+  10% {
+    background-size: 120%;
+    background-image: url("https://images3.alphacoders.com/131/thumb-440-1319293.webp");
+  }
+
+  19% {
+    background-size: 100%;
+    background-image: url("https://images3.alphacoders.com/131/thumb-440-1319293.webp");
+  }
+
+  20% {
+    background-size: 100%;
+    background-image: url("https://images.alphacoders.com/137/thumb-440-1379590.webp");
+  }
+
+  29% {
+    background-size: 120%;
+    background-image: url("https://images.alphacoders.com/137/thumb-440-1379590.webp");
+  }
+
+  30% {
+    background-size: 120%;
+    background-image: url("https://images7.alphacoders.com/137/thumb-440-1378827.webp");
+  }
+
+  39% {
+    background-size: 100%;
+    background-image: url("https://images7.alphacoders.com/137/thumb-440-1378827.webp");
+  }
+
+  40% {
+    background-size: 100%;
+    background-image: url("https://picfiles.alphacoders.com/639/thumb-800-639120.webp");
+  }
+
+  49% {
+    background-size: 120%;
+    background-image: url("https://picfiles.alphacoders.com/639/thumb-800-639120.webp");
+  }
+
+  50% {
+    background-size: 120%;
+    background-image: url("https://images8.alphacoders.com/138/thumb-440-1386891.webp");
+  }
+
+  59% {
+    background-size: 100%;
+    background-image: url("https://images8.alphacoders.com/138/thumb-440-1386891.webp");
+  }
+
+  60% {
+    background-size: 100%;
+    background-image: url("https://images6.alphacoders.com/126/thumb-440-1262863.webp");
+  }
+
+  69% {
+    background-size: 120%;
+    background-image: url("https://images6.alphacoders.com/126/thumb-440-1262863.webp");
+  }
+
+  70% {
+    background-size: 120%;
+    background-image: url("https://images4.alphacoders.com/804/thumb-440-804422.webp");
+  }
+
+  79% {
+    background-size: 100%;
+    background-image: url("https://images4.alphacoders.com/804/thumb-440-804422.webp");
+  }
+
+  80% {
+    background-size: 100%;
+    background-image: url("https://images4.alphacoders.com/126/thumb-440-1269960.webp");
+  }
+
+  89% {
+    background-size: 120%;
+    background-image: url("https://images4.alphacoders.com/126/thumb-440-1269960.webp");
+  }
+
+  90% {
+    background-size: 100%;
+    background-image: url("https://picfiles.alphacoders.com/156/thumb-1920-156896.jpg");
+  }
+
+  99% {
+    background-size: 120%;
+    background-image: url("https://picfiles.alphacoders.com/156/thumb-1920-156896.jpg");
   }
 
   100% {
-    background-size: 120%;
+    background-size: 100%;
+    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
   }
 }
