@@ -2,7 +2,7 @@
 
 import IPostImage from "@/interfaces/IPostImage";
 import clsx from "clsx";
-import { RefObject, useEffect, useRef, useState } from "react";
+import { RefObject, useRef, useState } from "react";
 
 type VideoRef = {
   id: number,
