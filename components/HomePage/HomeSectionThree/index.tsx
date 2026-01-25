@@ -1,6 +1,7 @@
 import Arrow from "@/components/ui/Arrow";
 import LeadButton from "@/components/ui/LeadButton";
-import Image from "next/image";
+import Videos from "./Videos";
+import posts from "@/data/posts";
 
 export default function HomeSectionThree() {
   return (
@@ -18,36 +19,33 @@ export default function HomeSectionThree() {
         </LeadButton>
       </div>
       <div>
-        <span className="grid grid-cols-3 gap-2">
-          <figure className="relative flex items-center justify-center cursor-pointer w-[200px] h-[135px] col-end-3">
-            <Image fill alt="" src="/erwin.png" />
-            <span className="absolute inset-0 border-[3px] border-success" />
-          </figure>
-          <span className="relative flex items-center justify-center cursor-pointer w-[200px] h-[135px]">
-            <Image fill alt="" src="/demon-slayer.png" />
-            <span className="absolute inset-0 bg-black/60 border-[3px] border-primary-1000" />
-            <img src="/play-button.png" className="absolute size-12" />
-          </span>
-          <span className="relative flex items-center justify-center cursor-pointer w-[200px] h-[135px]">
-            <Image fill alt="" src="/reze-arc.png" />
-            <span className="absolute inset-0 bg-black/60 border-[3px] border-primary-1000" />
-            <img src="/play-button.png" className="absolute size-12" />
-          </span>
-          <span className="relative flex items-center justify-center cursor-pointer w-[200px] h-[135px]">
-            <Image fill alt="" src="/dandadan.png" />
-            <span className="absolute inset-0 bg-black/60 border-[3px] border-primary-1000" />
-            <img src="/play-button.png" className="absolute size-12" />
-          </span>
-          <span className="relative flex items-center justify-center cursor-pointer w-[200px] h-[135px]">
-            <Image fill alt="" src="/your-name-tori.png" />
-            <span className="absolute inset-0 bg-black/60 border-[3px] border-primary-1000" />
-            <img src="/play-button.png" className="absolute size-12" />
-          </span>
-        </span>
-        <figcaption className="flex flex-col items-end mt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          <b className="text-success text-description">Lorem ipsum dolor sit amet, consectetur <span className="text-info">adipiscing elit.</span></b>
-        </figcaption>
+        <Videos videos={[
+          {
+            ...posts[0].videos![0],
+            title: posts[0].title,
+            authorName: posts[0].author
+          },
+          {
+            ...posts[1].videos![0],
+            title: posts[1].title,
+            authorName: posts[1].author
+          },
+          {
+            ...posts[2].videos![0],
+            title: posts[2].title,
+            authorName: posts[2].author
+          },
+          {
+            ...posts[3].videos![0],
+            title: posts[3].title,
+            authorName: posts[3].author
+          },
+          {
+            ...posts[4].videos![0],
+            title: posts[4].title,
+            authorName: posts[4].author
+          },
+        ]} />
         <span className="flex justify-end mt-2.5">
           <Arrow>
             <Arrow.Right />

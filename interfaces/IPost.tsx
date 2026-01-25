@@ -8,5 +8,6 @@ export default interface IPost {
   tags: string[],
   type: "post" | "quick-post",
   comments: string[],
-  postImage: IPostImage
+  postImage: IPostImage,
+  videos?: IPostImage[]
 }

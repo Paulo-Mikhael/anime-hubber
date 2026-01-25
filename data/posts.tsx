@@ -1,4 +1,5 @@
 import IPost from "../interfaces/IPost";
+import { v4 as uuid } from "uuid";
 
 export const posts: IPost[] = [
   {
@@ -10,9 +11,17 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["Great explanation!", "This helped a lot."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/1/800/400",
       alt: "React Server Components illustration"
-    }
+    },
+    videos: [
+      {
+        id: uuid(),
+        url: "https://giffiles.alphacoders.com/114/thumb-440-114951.mp4",
+        alt: "Mikasa preparing herself to fight against the Female Titan"
+      }
+    ]
   },
   {
     id: 2,
@@ -23,9 +32,17 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/2/800/400",
       alt: "React hooks concept"
-    }
+    },
+    videos: [
+      {
+        id: uuid(),
+        url: "https://giffiles.alphacoders.com/222/thumb-440-222022.mp4",
+        alt: "Isagi thinking on the field"
+      }
+    ]
   },
   {
     id: 3,
@@ -36,9 +53,17 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["Totally agree."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/3/800/400",
       alt: "TypeScript logo"
-    }
+    },
+    videos: [
+      {
+        id: uuid(),
+        url: "https://giffiles.alphacoders.com/223/thumb-440-223139.mp4",
+        alt: "A few seconds of Dan Da Dan's opening"
+      }
+    ]
   },
   {
     id: 4,
@@ -49,9 +74,17 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["Nice comparison!", "Very clear."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/4/800/400",
       alt: "CSS layout comparison"
-    }
+    },
+    videos: [
+      {
+        id: uuid(),
+        url: "https://giffiles.alphacoders.com/222/thumb-440-222812.mp4",
+        alt: "Makima's scene on Chainsaw Man's opening"
+      }
+    ]
   },
   {
     id: 5,
@@ -62,9 +95,17 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/5/800/400",
       alt: "Semantic HTML structure"
-    }
+    },
+    videos: [
+      {
+        id: uuid(),
+        url: "https://giffiles.alphacoders.com/223/thumb-440-223101.mp4",
+        alt: "Gyomei fighting against Muzan's blood technique"
+      }
+    ]
   },
   {
     id: 6,
@@ -75,6 +116,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["This was confusing before.", "Thanks!"],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/6/800/400",
       alt: "Next.js hydration process"
     }
@@ -88,6 +130,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: ["So true."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/7/800/400",
       alt: "Git commit history"
     }
@@ -101,6 +144,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/8/800/400",
       alt: "REST API diagram"
     }
@@ -114,6 +158,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: ["Good point."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/9/800/400",
       alt: "Dark mode interface"
     }
@@ -127,6 +172,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["Based take.", "Agree 100%."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/10/800/400",
       alt: "State management flow"
     }
@@ -140,6 +186,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/11/800/400",
       alt: "React list rendering"
     }
@@ -153,6 +200,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["This should be a rule."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/12/800/400",
       alt: "Readable code example"
     }
@@ -166,6 +214,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/13/800/400",
       alt: "Debounce concept"
     }
@@ -179,6 +228,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["Super informative."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/14/800/400",
       alt: "Browser rendering pipeline"
     }
@@ -192,6 +242,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: ["Needed this reminder."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/15/800/400",
       alt: "Accessibility icons"
     }
@@ -205,6 +256,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/16/800/400",
       alt: "JWT authentication flow"
     }
@@ -218,6 +270,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: ["Learned the hard way."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/17/800/400",
       alt: "Environment variables concept"
     }
@@ -231,6 +284,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/18/800/400",
       alt: "Performance optimization"
     }
@@ -244,6 +298,7 @@ export const posts: IPost[] = [
     type: "quick-post",
     comments: [],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/19/800/400",
       alt: "Design system components"
     }
@@ -257,6 +312,7 @@ export const posts: IPost[] = [
     type: "post",
     comments: ["Well said.", "Needed this."],
     postImage: {
+      id: uuid(),
       url: "https://picsum.photos/seed/20/800/400",
       alt: "Testing workflow"
     }
