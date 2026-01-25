@@ -1,4 +1,5 @@
 import IPopularAnime from "@/interfaces/IPopularAnime"
+import { v4 as uuid } from "uuid"
 
 const popularAnimes: IPopularAnime[] = [
   {
@@ -7,6 +8,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A ninja story about perseverance, friendship, and destiny.",
     position: 1,
     image: {
+      id: uuid(),
       url: "https://images3.alphacoders.com/135/thumb-440-135625.webp",
       alt: "Naruto Uzumaki"
     }
@@ -17,6 +19,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Pirates searching for the ultimate treasure, the One Piece.",
     position: 2,
     image: {
+      id: uuid(),
       url: "https://images5.alphacoders.com/134/thumb-440-1345309.webp",
       alt: "Monkey D. Luffy"
     }
@@ -27,6 +30,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Humanity fights for survival against giant humanoid creatures.",
     position: 3,
     image: {
+      id: uuid(),
       url: "https://images.alphacoders.com/137/thumb-440-1379590.webp",
       alt: "Attack on Titan key visual"
     }
@@ -37,6 +41,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A class of assassins is created to kill it's teacher.",
     position: 4,
     image: {
+      id: uuid(),
       url: "https://images7.alphacoders.com/505/thumb-440-505747.webp",
       alt: "E Class"
     }
@@ -47,6 +52,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A notebook that grants the power to kill reshapes morality.",
     position: 5,
     image: {
+      id: uuid(),
       url: "https://images5.alphacoders.com/609/thumb-440-609600.webp",
       alt: "Death Note notebook"
     }
@@ -57,6 +63,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Two brothers seek redemption using alchemy.",
     position: 6,
     image: {
+      id: uuid(),
       url: "https://artfiles.alphacoders.com/101/thumb-800-101668.webp",
       alt: "Edward and Alphonse Elric"
     }
@@ -67,6 +74,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A boy fights demons to save his sister.",
     position: 7,
     image: {
+      id: uuid(),
       url: "https://images5.alphacoders.com/136/thumb-440-1362336.webp",
       alt: "Tanjiro Kamado"
     }
@@ -77,6 +85,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A world where superheroes are the norm.",
     position: 8,
     image: {
+      id: uuid(),
       url: "https://images8.alphacoders.com/965/thumb-440-965107.webp",
       alt: "Izuku Midoriya"
     }
@@ -87,6 +96,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Sorcerers battle cursed spirits born from negative emotions.",
     position: 9,
     image: {
+      id: uuid(),
       url: "https://images2.alphacoders.com/133/thumb-440-1335141.webp",
       alt: "Yuji Itadori"
     }
@@ -97,6 +107,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A dark tale of humans and flesh-eating ghouls.",
     position: 10,
     image: {
+      id: uuid(),
       url: "https://images4.alphacoders.com/804/thumb-440-804422.webp",
       alt: "Ken Kaneki"
     }
@@ -107,6 +118,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A teenager gains the powers of a Soul Reaper.",
     position: 11,
     image: {
+      id: uuid(),
       url: "https://images4.alphacoders.com/135/thumb-440-1355403.webp",
       alt: "Ichigo Kurosaki"
     }
@@ -117,6 +129,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A boy searches for his father in a dangerous world.",
     position: 12,
     image: {
+      id: uuid(),
       url: "https://images.alphacoders.com/137/thumb-440-1378190.webp",
       alt: "Gon Freecss"
     }
@@ -127,6 +140,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Players trapped inside a virtual reality MMORPG.",
     position: 13,
     image: {
+      id: uuid(),
       url: "https://images3.alphacoders.com/797/thumb-440-797571.webp",
       alt: "Kirito"
     }
@@ -137,6 +151,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Time travel experiments spiral out of control.",
     position: 14,
     image: {
+      id: uuid(),
       url: "https://images3.alphacoders.com/769/thumb-440-769152.webp",
       alt: "Okabe Rintarou"
     }
@@ -147,6 +162,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Space bounty hunters chasing criminals and their pasts.",
     position: 15,
     image: {
+      id: uuid(),
       url: "https://images7.alphacoders.com/642/thumb-440-642258.webp",
       alt: "Spike Spiegel"
     }
@@ -157,6 +173,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "Teenagers pilot mechs to fight mysterious beings.",
     position: 16,
     image: {
+      id: uuid(),
       url: "https://images5.alphacoders.com/974/thumb-440-974775.webp",
       alt: "Evangelion Unit-01"
     }
@@ -167,6 +184,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A magicless boy aims to become the Wizard King.",
     position: 17,
     image: {
+      id: uuid(),
       url: "https://images4.alphacoders.com/131/thumb-440-1319312.webp",
       alt: "Asta"
     }
@@ -177,6 +195,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A devil hunter with chainsaws for limbs.",
     position: 18,
     image: {
+      id: uuid(),
       url: "https://images3.alphacoders.com/131/thumb-440-1319293.webp",
       alt: "Denji Chainsaw Man"
     }
@@ -187,6 +206,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A brutal tale of Vikings, revenge, and war.",
     position: 19,
     image: {
+      id: uuid(),
       url: "https://picfiles.alphacoders.com/273/thumb-1920-273782.png",
       alt: "Thorfinn"
     }
@@ -197,6 +217,7 @@ const popularAnimes: IPopularAnime[] = [
     description: "A strategic rebellion fueled by supernatural power.",
     position: 20,
     image: {
+      id: uuid(),
       url: "https://images2.alphacoders.com/846/thumb-440-846242.webp",
       alt: "Lelouch Lamperouge"
     }
