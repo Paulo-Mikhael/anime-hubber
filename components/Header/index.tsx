@@ -29,7 +29,7 @@ function DefaultHeader() {
   return (
     <header className={
       clsx(
-        "flex justify-between absolute top-0 left-0 z-10 w-full py-8 px-40 bg-[#02090E]/90",
+        "flex justify-between absolute top-0 left-0 z-10 w-full py-8 px-40 bg-[#02090E]/80",
       )
     }>
       <TextBox style="secondary" filterButton placeholder="Encontrar posts..." />

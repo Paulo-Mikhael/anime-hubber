@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function HomeSectionOne() {
   return (
-    <section className="flex items-center">
+    <section className="flex items-center w-full h-screen px-40">
       <div className="flex flex-col justify-between">
         <span>
           <h2 className="text-section-title font-bold">

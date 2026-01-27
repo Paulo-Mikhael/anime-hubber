@@ -5,7 +5,7 @@ import posts from "@/data/posts";
 
 export default function HomeSectionThree() {
   return (
-    <section className="flex items-center justify-between">
+    <section className="flex items-center justify-between w-full h-screen px-40">
       <div>
         <span>
           <h2 className="text-section-title font-bold">Momentos Marcantes</h2>
