@@ -76,8 +76,6 @@ footer {
 /* Distance from header */
 main {
   padding-top: 160px;
-  transition: none;
-  transition-duration: 0ms;
 }
 
 main,
@@ -90,22 +88,22 @@ section {
 @keyframes zoom {
   0% {
     background-size: 100%;
-    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
+    background-image: url("https://images3.alphacoders.com/139/thumb-440-1394954.webp");
   }
 
   9% {
     background-size: 120%;
-    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
+    background-image: url("https://images3.alphacoders.com/139/thumb-440-1394954.webp");
   }
 
   10% {
     background-size: 120%;
-    background-image: url("https://images3.alphacoders.com/131/thumb-440-1319293.webp");
+    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
   }
 
   19% {
     background-size: 100%;
-    background-image: url("https://images3.alphacoders.com/131/thumb-440-1319293.webp");
+    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
   }
 
   20% {
@@ -190,6 +188,6 @@ section {
 
   100% {
     background-size: 100%;
-    background-image: url("https://images2.alphacoders.com/138/thumb-440-1384110.webp");
+    background-image: url("https://images3.alphacoders.com/139/thumb-440-1394954.webp");
   }
 }
