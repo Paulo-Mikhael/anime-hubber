@@ -1,7 +1,10 @@
+import AllPostsPage from "@/components/AllPosts";
+
 export default function AllPosts() {
   return (
-    <main>
-      <p>Todos os posts</p>
-    </main>
+    <AllPostsPage>
+      <AllPostsPage.Main />
+      <AllPostsPage.Aside />
+    </AllPostsPage>
   );
 }

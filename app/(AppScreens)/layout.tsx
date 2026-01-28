@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { ubuntu } from "../layout";
 import Header from "@/components/Header";
 
 export default function AppScreensLayout({
