@@ -13,10 +13,11 @@ interface Props {
   labelText?: string,
   filterButton?: boolean,
   filterButtonOnClick?: () => void,
-  full?: boolean
+  full?: boolean,
+  icon?: boolean
 }
 
-export default function TextBox({ placeholder = "Escreva algo aqui...", style, disabled = false, labelText, filterButton = false, filterButtonOnClick, state, full = true }: Props) {
+export default function TextBox({ placeholder = "Escreva algo aqui...", style, disabled = false, labelText, filterButton = false, filterButtonOnClick, state, full = true, icon = true }: Props) {
   // Elements ref to change it's style manually
   const labelRef = useRef<HTMLLabelElement>(null);
   const boxBorderRef = useRef<HTMLSpanElement>(null);
@@ -107,7 +108,7 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
         ref={boxBorderRef}
         className={
           clsx(
-            "flex justify-center items-center gap-2.5 px-3.5 rounded-[3px] border-4 relative transition-colors transition-normal",
+            "flex justify-start items-center gap-2.5 px-3.5 rounded-[3px] border-4 relative transition-colors transition-normal",
             primary && "border-primary-750 group-hover:border-primary-250",
             secondary && "border-secondary-750 group-hover:border-secondary-250",
             disabled && "border-typo-72",
@@ -129,16 +130,20 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
             )
           }
         />
-        <div className="flex gap-2.5 justify-center items-center z-10">
-          <Search
-            className={
-              clsx(
-                primary && "text-primary-500 group-hover:text-primary-750",
-                secondary && "text-secondary-500 group-hover:text-secondary-750",
-                disabled && "text-typo-72"
-              )
-            }
-          />
+        <div className="flex gap-2.5 items-center z-10 flex-1">
+          {
+            icon && (
+              <Search
+                className={
+                  clsx(
+                    primary && "text-primary-500 group-hover:text-primary-750",
+                    secondary && "text-secondary-500 group-hover:text-secondary-750",
+                    disabled && "text-typo-72"
+                  )
+                }
+              />
+            )
+          }
           <input
             disabled={disabled}
             onFocus={activeTextboxStyles}
@@ -146,7 +151,7 @@ export default function TextBox({ placeholder = "Escreva algo aqui...", style, d
             id="textbox"
             className={
               clsx(
-                "py-3 outline-0",
+                "py-3 outline-0 flex-1",
                 !disabled && "placeholder:text-typo-72",
                 disabled && "cursor-not-allowed placeholder:text-typo-72"
               )
